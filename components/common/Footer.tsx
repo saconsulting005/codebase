@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image"; // Import Next.js Image component
 import { Facebook, Twitter, Linkedin } from "lucide-react";
 
 const Footer: React.FC = () => {
@@ -9,10 +10,12 @@ const Footer: React.FC = () => {
         <div className="flex flex-col gap-6 max-w-[300px]">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-              {/* Placeholder for Logo */}
-              <img
+              {/* Using Next.js Image component for the logo */}
+              <Image
                 src="/assets/footerlogo.png"
                 alt="Audit Consulting Logo"
+                width={24} // Set appropriate width
+                height={24} // Set appropriate height
                 className="w-6 h-6"
               />
             </div>
@@ -40,42 +43,40 @@ const Footer: React.FC = () => {
 
         {/* Middle Section */}
         <div className="flex flex-wrap gap-[40px] lg:gap-[80px]">
-  {/* Services Section */}
-  <div className="flex flex-col gap-2">
-    <h3 className="text-[16px] font-[600] mb-4">Services</h3>
-    <ul className="flex flex-col gap-2">
-      <li className="hover:text-[#FF5900] transition">Audit</li>
-      <li className="hover:text-[#FF5900] transition">Tax</li>
-      <li className="hover:text-[#FF5900] transition">Advisory</li>
-      <li className="hover:text-[#FF5900] transition">Consulting</li>
-    </ul>
-  </div>
+          {/* Services Section */}
+          <div className="flex flex-col gap-2">
+            <h3 className="text-[16px] font-[600] mb-4">Services</h3>
+            <ul className="flex flex-col gap-2">
+              <li className="hover:text-[#FF5900] transition">Audit</li>
+              <li className="hover:text-[#FF5900] transition">Tax</li>
+              <li className="hover:text-[#FF5900] transition">Advisory</li>
+              <li className="hover:text-[#FF5900] transition">Consulting</li>
+            </ul>
+          </div>
 
-  {/* Useful Links Section */}
-  <div className="flex flex-col gap-2">
-    <h3 className="text-[16px] font-[600] mb-4">Useful Links</h3>
-    <ul className="flex flex-col gap-2">
-      <li className="hover:text-[#FF5900] transition">Home</li>
-      <li className="hover:text-[#FF5900] transition">About</li>
-      <li className="hover:text-[#FF5900] transition">Blog</li>
-      <li className="hover:text-[#FF5900] transition">Contact</li>
-      <li className="hover:text-[#FF5900] transition">F.A.Q</li>
-    </ul>
-  </div>
+          {/* Useful Links Section */}
+          <div className="flex flex-col gap-2">
+            <h3 className="text-[16px] font-[600] mb-4">Useful Links</h3>
+            <ul className="flex flex-col gap-2">
+              <li className="hover:text-[#FF5900] transition">Home</li>
+              <li className="hover:text-[#FF5900] transition">About</li>
+              <li className="hover:text-[#FF5900] transition">Blog</li>
+              <li className="hover:text-[#FF5900] transition">Contact</li>
+              <li className="hover:text-[#FF5900] transition">F.A.Q</li>
+            </ul>
+          </div>
 
-  {/* Additional Column (Example: Resources) */}
-  <div className="flex flex-col gap-2">
-    <h3 className="text-[16px] font-[600] mb-4">Resources</h3>
-    <ul className="flex flex-col gap-2">
-      <li className="hover:text-[#FF5900] transition">Case Studies</li>
-      <li className="hover:text-[#FF5900] transition">Whitepapers</li>
-      <li className="hover:text-[#FF5900] transition">Guides</li>
-      <li className="hover:text-[#FF5900] transition">E-books</li>
-    </ul>
-  </div>
-</div>
-
-
+          {/* Additional Column (Example: Resources) */}
+          <div className="flex flex-col gap-2">
+            <h3 className="text-[16px] font-[600] mb-4">Resources</h3>
+            <ul className="flex flex-col gap-2">
+              <li className="hover:text-[#FF5900] transition">Case Studies</li>
+              <li className="hover:text-[#FF5900] transition">Whitepapers</li>
+              <li className="hover:text-[#FF5900] transition">Guides</li>
+              <li className="hover:text-[#FF5900] transition">E-books</li>
+            </ul>
+          </div>
+        </div>
 
         {/* Right Section */}
         <div className="flex flex-col gap-4">
