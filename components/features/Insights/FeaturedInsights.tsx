@@ -7,7 +7,7 @@ const FeaturedInsights: React.FC = () => {
       date: "25.01.24",
       category: "Business Consulting",
       title: "Building business agility begins with culture",
-      image: "/assets/insights/insight1.png", // Replace with your actual image paths
+      image: "/assets/insights/insight1.png", // Replace with actual image paths
     },
     {
       date: "25.01.24",
@@ -24,26 +24,26 @@ const FeaturedInsights: React.FC = () => {
   ];
 
   return (
-    <div className="w-full max-w-[1540px] mx-auto px-[182px] py-[120px] bg-white">
+    <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-16 bg-white">
       {/* Heading Section */}
-      <div className="text-center mb-[40px]">
-        <p className="text-[#FF5900] text-[16px] font-[600] uppercase mb-2">
+      <div className="text-center mb-12">
+        <p className="text-[#FF5900] text-sm font-semibold uppercase mb-2">
           Business Consulting
         </p>
-        <h2 className="text-[#009CDE] text-[40px] font-[600]">
+        <h2 className="text-[#009CDE] text-3xl md:text-4xl font-extrabold">
           Featured Insights
         </h2>
       </div>
 
       {/* Insights Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[30px]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {insights.map((insight, index) => (
           <div
             key={index}
-            className="flex flex-col bg-[#F8F8F8] rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            className="flex flex-col bg-[#F8F8F8] rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
           >
-            {/* Image */}
-            <div className="relative w-full h-[250px]">
+            {/* Image Section */}
+            <div className="relative w-full h-56">
               <Image
                 src={insight.image}
                 alt={insight.title}
@@ -53,14 +53,14 @@ const FeaturedInsights: React.FC = () => {
             </div>
 
             {/* Text Content */}
-            <div className="p-[20px]">
-              <p className="text-[14px] text-[#7D7D7D] font-[400] mb-2">
+            <div className="p-6">
+              <p className="text-sm text-[#7D7D7D] font-medium mb-2">
                 {insight.date} / {insight.category}
               </p>
-              <h3 className="text-[20px] text-[#009CDE] font-[600] mb-4">
+              <h3 className="text-lg text-[#009CDE] font-semibold mb-4">
                 {insight.title}
               </h3>
-              <button className="text-[#232525] font-[600] text-[16px] flex items-center gap-2 transition-transform hover:translate-x-1">
+              <button className="text-[#232525] font-semibold text-base flex items-center gap-2 hover:text-[#009CDE] transition-transform hover:translate-x-1">
                 Read more <span>&#8594;</span>
               </button>
             </div>

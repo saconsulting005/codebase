@@ -14,23 +14,23 @@ const SectorsSection: React.FC = () => {
   ];
 
   return (
-    <div className="flex flex-col w-full max-w-[1540px] mx-auto px-[175px] py-[120px] gap-10">
+    <div className="flex flex-col w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12 lg:px-20 py-10 sm:py-12 md:py-16 lg:py-20 gap-10">
       {/* Heading Section */}
-      <div className="flex flex-col gap-4">
-        <p className="text-[#FF5900] text-[16px] font-[600] uppercase">
+      <div className="flex flex-col gap-4 text-center md:text-left">
+        <p className="text-[#FF5900] text-[14px] sm:text-[16px] font-[600] uppercase">
           Business Consulting
         </p>
-        <h2 className="text-[#009CDE] text-[40px] font-[600]">
+        <h2 className="text-[#009CDE] text-[26px] sm:text-[32px] md:text-[38px] lg:text-[42px] font-[600] leading-tight">
           What sectors of the economy do we serve
         </h2>
       </div>
 
       {/* Grid Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8 justify-items-center">
         {sectors.map((sector, index) => (
           <div
             key={index}
-            className="relative group w-full h-[250px] rounded-lg overflow-hidden shadow-md cursor-pointer"
+            className="relative group w-[300px] h-[300px]  lg:h-[260px] rounded-lg overflow-hidden shadow-md cursor-pointer mx-auto"
           >
             <Image
               src={sector.image}
