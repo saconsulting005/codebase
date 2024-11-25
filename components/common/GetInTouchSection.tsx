@@ -1,7 +1,51 @@
-import React from "react";
-import Image from "next/image";
+'use client';
+
+import React from 'react';
+import Image from 'next/image';
+import { useForm, SubmitHandler } from 'react-hook-form';
+
+type FormInputs = {
+  name: string;
+  email: string;
+  phone: string;
+  subject: string;
+  message: string;
+};
 
 const GetInTouchSection: React.FC = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm<FormInputs>();
+
+  const onSubmit: SubmitHandler<FormInputs> = async (data) => {
+    // Hardcoded production API URL (replace this with your actual backend URL)
+    const apiUrl = 'https://audit-admin-theta.vercel.app/api/contactus'; 
+
+    try {
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to send message');
+      }
+
+      // Reset form on success
+      reset();
+      alert('Message sent successfully!');
+    } catch (error: any) {
+      alert(error.message || 'Something went wrong');
+    }
+  };
+
   return (
     <section className="bg-[#F8F8F8] py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -42,19 +86,33 @@ const GetInTouchSection: React.FC = () => {
               </h2>
             </div>
 
-            <form className="w-full space-y-4">
+            <form onSubmit={handleSubmit(onSubmit)} className="w-full space-y-4">
               {/* Name and Email */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <input
                   type="text"
                   placeholder="Your name"
-                  className="w-full p-3 sm:p-4 border rounded-full focus:ring-2 focus:ring-[#009CDE] focus:outline-none text-sm"
+                  className={`w-full p-3 sm:p-4 border rounded-full text-sm ${errors.name ? 'border-red-500' : 'focus:ring-2 focus:ring-[#009CDE]'}`}
+                  {...register('name', { required: 'Name is required' })}
                 />
+                {errors.name && (
+                  <span className="text-red-500 text-xs mt-1">{errors.name.message}</span>
+                )}
                 <input
                   type="email"
                   placeholder="Your Email"
-                  className="w-full p-3 sm:p-4 border rounded-full focus:ring-2 focus:ring-[#009CDE] focus:outline-none text-sm"
+                  className={`w-full p-3 sm:p-4 border rounded-full text-sm ${errors.email ? 'border-red-500' : 'focus:ring-2 focus:ring-[#009CDE]'}`}
+                  {...register('email', {
+                    required: 'Email is required',
+                    pattern: {
+                      value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                      message: 'Enter a valid email address',
+                    },
+                  })}
                 />
+                {errors.email && (
+                  <span className="text-red-500 text-xs mt-1">{errors.email.message}</span>
+                )}
               </div>
 
               {/* Phone and Subject */}
@@ -62,28 +120,41 @@ const GetInTouchSection: React.FC = () => {
                 <input
                   type="text"
                   placeholder="Your Phone"
-                  className="w-full p-3 sm:p-4 border rounded-full focus:ring-2 focus:ring-[#009CDE] focus:outline-none text-sm"
+                  className={`w-full p-3 sm:p-4 border rounded-full text-sm ${errors.phone ? 'border-red-500' : 'focus:ring-2 focus:ring-[#009CDE]'}`}
+                  {...register('phone', { required: 'Phone number is required' })}
                 />
+                {errors.phone && (
+                  <span className="text-red-500 text-xs mt-1">{errors.phone.message}</span>
+                )}
                 <input
                   type="text"
                   placeholder="Subject"
-                  className="w-full p-3 sm:p-4 border rounded-full focus:ring-2 focus:ring-[#009CDE] focus:outline-none text-sm"
+                  className={`w-full p-3 sm:p-4 border rounded-full text-sm ${errors.subject ? 'border-red-500' : 'focus:ring-2 focus:ring-[#009CDE]'}`}
+                  {...register('subject', { required: 'Subject is required' })}
                 />
+                {errors.subject && (
+                  <span className="text-red-500 text-xs mt-1">{errors.subject.message}</span>
+                )}
               </div>
 
               {/* Message */}
               <textarea
                 placeholder="Your message"
                 rows={4}
-                className="w-full p-3 sm:p-4 border rounded-lg focus:ring-2 focus:ring-[#009CDE] focus:outline-none resize-none text-sm"
+                className={`w-full p-3 sm:p-4 border rounded-lg text-sm ${errors.message ? 'border-red-500' : 'focus:ring-2 focus:ring-[#009CDE]'}`}
+                {...register('message', { required: 'Message is required' })}
               ></textarea>
+              {errors.message && (
+                <span className="text-red-500 text-xs mt-1">{errors.message.message}</span>
+              )}
 
               {/* Submit Button */}
               <button
                 type="submit"
+                disabled={isSubmitting}
                 className="w-full bg-[#009CDE] text-white text-sm sm:text-base font-semibold py-3 rounded-full hover:bg-[#007bbd] transition-all duration-300"
               >
-                Send message
+                {isSubmitting ? 'Sending...' : 'Send message'}
               </button>
             </form>
           </div>
