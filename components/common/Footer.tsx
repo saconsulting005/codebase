@@ -13,13 +13,13 @@ const Footer: React.FC = () => {
             <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center">
               <Image
                 src="/assets/logo.png"
-                alt="Audit Consulting Logo"
+                alt=" SA Consulting "
                 width={40}
                 height={40}
                 priority
               />
             </div>
-            <h2 className="text-[20px] font-semibold">AUDIT CONSULTING</h2>
+            <h2 className="text-[20px] font-semibold">SA Consulting </h2>
           </div>
           <p className="text-[14px] leading-[20px] text-[rgba(255,255,255,0.8)]">
             Velit facilisi senectus velit elementum. Consequat vel arcu feugiat

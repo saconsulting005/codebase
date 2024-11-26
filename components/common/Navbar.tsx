@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
         <Link href="/" aria-label="Go to homepage">
           <div className="flex items-center p-3 rounded ">
             <Image
-              src="/assets/Logo.png"
+              src="/assets/logo.png"
               alt="Logo"
               width={50}
               height={50}

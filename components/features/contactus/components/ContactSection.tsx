@@ -13,12 +13,12 @@ const ContactSection: React.FC = () => {
     {
       icon: <MapPin size={32} className="text-[#FF5900]" />,
       title: "Address",
-      info: "Rwanda, Kigali, KN 2 Ave",
+      info: "House # 106, street KG684, Kaciyru, Kigali, Rwanda",
     },
     {
       icon: <Mail size={32} className="text-[#FF5900]" />,
       title: "Email",
-      info: "comingsoon@gmail.com",
+      info: "sa.consultingg@gmail.com",
     },
     {
       icon: <Phone size={32} className="text-[#FF5900]" />,
