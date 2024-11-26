@@ -7,7 +7,7 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 type FormInputs = {
   name: string;
   email: string;
-  phone: string;
+  phoneNumber: string;
   subject: string;
   message: string;
 };
@@ -21,8 +21,10 @@ const GetInTouchSection: React.FC = () => {
   } = useForm<FormInputs>();
 
   const onSubmit: SubmitHandler<FormInputs> = async (data) => {
-    // Hardcoded production API URL (replace this with your actual backend URL)
-    const apiUrl = 'https://audit-admin-theta.vercel.app/api/contactus'; 
+    // Log form data to console for debugging
+    console.log("Form Data:", data);
+
+    const apiUrl = 'https://audit-admin-theta.vercel.app/api/contactus';
 
     try {
       const response = await fetch(apiUrl, {
@@ -38,18 +40,20 @@ const GetInTouchSection: React.FC = () => {
         throw new Error(errorData.error || 'Failed to send message');
       }
 
-      // Reset form on success
       reset();
       alert('Message sent successfully!');
-    } catch (error: any) {
-      alert(error.message || 'Something went wrong');
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        alert(error.message || 'Something went wrong');
+      } else {
+        alert('An unexpected error occurred');
+      }
     }
   };
 
   return (
     <section className="bg-[#F8F8F8] py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <div className="text-center mb-6 lg:mb-8">
           <h2 className="text-[#009CDE] text-xl sm:text-2xl lg:text-3xl font-semibold leading-tight mb-2">
             Let’s talk about audit and assurance
@@ -61,9 +65,7 @@ const GetInTouchSection: React.FC = () => {
           <div className="h-1 w-24 sm:w-40 bg-[#FF5900] mx-auto mt-4"></div>
         </div>
 
-        {/* Main Content */}
         <div className="flex flex-col lg:flex-row items-start gap-6 lg:gap-8">
-          {/* Left Content - Image */}
           <div className="hidden lg:block flex-shrink-0">
             <Image
               src="/assets/contact-image.png"
@@ -75,7 +77,6 @@ const GetInTouchSection: React.FC = () => {
             />
           </div>
 
-          {/* Right Content - Form */}
           <div className="bg-white rounded-xl shadow-md md:h-[530px] xl:h-[530px] w-full lg:max-w-[740px] p-6 sm:p-8">
             <div className="mb-6">
               <h3 className="text-[#FF5900] text-xs sm:text-sm font-semibold uppercase mb-2">
@@ -92,7 +93,9 @@ const GetInTouchSection: React.FC = () => {
                 <input
                   type="text"
                   placeholder="Your name"
-                  className={`w-full p-3 sm:p-4 border rounded-full text-sm ${errors.name ? 'border-red-500' : 'focus:ring-2 focus:ring-[#009CDE]'}`}
+                  className={`w-full p-3 sm:p-4 border rounded-full text-sm ${
+                    errors.name ? 'border-red-500' : 'focus:ring-2 focus:ring-[#009CDE]'
+                  }`}
                   {...register('name', { required: 'Name is required' })}
                 />
                 {errors.name && (
@@ -101,7 +104,9 @@ const GetInTouchSection: React.FC = () => {
                 <input
                   type="email"
                   placeholder="Your Email"
-                  className={`w-full p-3 sm:p-4 border rounded-full text-sm ${errors.email ? 'border-red-500' : 'focus:ring-2 focus:ring-[#009CDE]'}`}
+                  className={`w-full p-3 sm:p-4 border rounded-full text-sm ${
+                    errors.email ? 'border-red-500' : 'focus:ring-2 focus:ring-[#009CDE]'
+                  }`}
                   {...register('email', {
                     required: 'Email is required',
                     pattern: {
@@ -120,16 +125,20 @@ const GetInTouchSection: React.FC = () => {
                 <input
                   type="text"
                   placeholder="Your Phone"
-                  className={`w-full p-3 sm:p-4 border rounded-full text-sm ${errors.phone ? 'border-red-500' : 'focus:ring-2 focus:ring-[#009CDE]'}`}
-                  {...register('phone', { required: 'Phone number is required' })}
+                  className={`w-full p-3 sm:p-4 border rounded-full text-sm ${
+                    errors.phoneNumber ? 'border-red-500' : 'focus:ring-2 focus:ring-[#009CDE]'
+                  }`}
+                  {...register('phoneNumber', { required: 'Phone number is required' })}
                 />
-                {errors.phone && (
-                  <span className="text-red-500 text-xs mt-1">{errors.phone.message}</span>
+                {errors.phoneNumber && (
+                  <span className="text-red-500 text-xs mt-1">{errors.phoneNumber.message}</span>
                 )}
                 <input
                   type="text"
                   placeholder="Subject"
-                  className={`w-full p-3 sm:p-4 border rounded-full text-sm ${errors.subject ? 'border-red-500' : 'focus:ring-2 focus:ring-[#009CDE]'}`}
+                  className={`w-full p-3 sm:p-4 border rounded-full text-sm ${
+                    errors.subject ? 'border-red-500' : 'focus:ring-2 focus:ring-[#009CDE]'
+                  }`}
                   {...register('subject', { required: 'Subject is required' })}
                 />
                 {errors.subject && (
@@ -141,14 +150,15 @@ const GetInTouchSection: React.FC = () => {
               <textarea
                 placeholder="Your message"
                 rows={4}
-                className={`w-full p-3 sm:p-4 border rounded-lg text-sm ${errors.message ? 'border-red-500' : 'focus:ring-2 focus:ring-[#009CDE]'}`}
+                className={`w-full p-3 sm:p-4 border rounded-lg text-sm ${
+                  errors.message ? 'border-red-500' : 'focus:ring-2 focus:ring-[#009CDE]'
+                }`}
                 {...register('message', { required: 'Message is required' })}
               ></textarea>
               {errors.message && (
                 <span className="text-red-500 text-xs mt-1">{errors.message.message}</span>
               )}
 
-              {/* Submit Button */}
               <button
                 type="submit"
                 disabled={isSubmitting}

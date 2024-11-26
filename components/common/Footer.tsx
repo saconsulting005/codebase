@@ -10,12 +10,12 @@ const Footer: React.FC = () => {
         {/* Column 1: About Section */}
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+            <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center">
               <Image
-                src="/assets/footerlogo.png"
+                src="/assets/logo.png"
                 alt="Audit Consulting Logo"
-                width={24}
-                height={24}
+                width={40}
+                height={40}
                 priority
               />
             </div>

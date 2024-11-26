@@ -13,17 +13,17 @@ const ContactSection: React.FC = () => {
     {
       icon: <MapPin size={32} className="text-[#FF5900]" />,
       title: "Address",
-      info: "19 North Road Piscataway, NJ 08854",
+      info: "Rwanda, Kigali, KN 2 Ave",
     },
     {
       icon: <Mail size={32} className="text-[#FF5900]" />,
       title: "Email",
-      info: "gamma@sbcglobal.net\ngamma@sbcglobal.net",
+      info: "comingsoon@gmail.com",
     },
     {
       icon: <Phone size={32} className="text-[#FF5900]" />,
       title: "Phone",
-      info: "(246) 917-5787\n(246) 917-5787",
+      info: "+250791569952",
     },
     {
       icon: <Clock size={32} className="text-[#FF5900]" />,

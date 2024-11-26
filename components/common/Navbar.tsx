@@ -21,12 +21,12 @@ const Navbar: React.FC = () => {
       <nav className="flex justify-between items-center w-[90%] max-w-[1440px] mx-auto py-4">
         {/* Logo Section */}
         <Link href="/" aria-label="Go to homepage">
-          <div className="flex items-center p-3 rounded bg-[#009CDE]">
+          <div className="flex items-center p-3 rounded ">
             <Image
-              src="/assets/Icon.png"
+              src="/assets/Logo.png"
               alt="Logo"
-              width={40}
-              height={40}
+              width={50}
+              height={50}
               priority
             />
           </div>
