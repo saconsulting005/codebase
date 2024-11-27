@@ -16,7 +16,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: " Audit Consulting",
+  title: " SA Consulting",
   description: " Audit Consulting is a business consulting firm that provides services to various sectors of the economy.",
 };
 
