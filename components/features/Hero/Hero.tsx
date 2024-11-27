@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const HeroSection: React.FC = () => {
   return (
@@ -20,11 +21,7 @@ const HeroSection: React.FC = () => {
 
       {/* Content */}
       <div className="relative z-10 max-w-[400px] md:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px] px-[20px] md:px-[40px] lg:px-[60px] xl:pl-[100px] text-white">
-        {/* Subheading */}
-        <div className="text-[8px] md:text-[12px] lg:text-[14px] xl:text-[14px] font-medium uppercase tracking-wide mb-2 md:mb-4">
-          Consulting
-        </div>
-
+       
         {/* Heading */}
         <h1 className="text-[20px] md:text-[26px] lg:text-[32px] xl:text-[34px] font-bold leading-tight mb-4 md:mb-6">
           Be a catalyst for creating value through volatility.
@@ -64,20 +61,26 @@ const HeroSection: React.FC = () => {
         </div>
 
         {/* Buttons Section */}
-        <div className="flex flex-col md:flex-row gap-4 md:gap-8">
-          <button
-            className="px-6 py-2 md:px-8 md:py-2 lg:px-10 lg:py-3 bg-white text-[#009CDE] text-[12px] md:text-[14px] lg:text-[16px] font-medium rounded-full shadow-lg hover:scale-105 transition-transform duration-300"
-            aria-label="Discover How"
-          >
-            Discover How
-          </button>
-          <button
-            className="px-6 py-2 md:px-8 md:py-2 lg:px-10 lg:py-3 border-2 border-white text-white text-[12px] md:text-[14px] lg:text-[16px] font-medium rounded-full shadow-lg hover:scale-105 transition-transform duration-300"
-            aria-label="Learn More"
-          >
-            Learn More
-          </button>
-        </div>
+        <div className="flex flex-row gap-4 md:gap-6">
+  <Link href="/services">
+    <button
+      className="px-6 py-2 md:px-8 md:py-2 lg:px-10 lg:py-3 bg-white text-[#009CDE] text-[12px] md:text-[14px] lg:text-[16px] font-medium rounded-full shadow-lg hover:scale-105 transition-transform duration-300"
+      aria-label="Discover How"
+    >
+      Discover How
+    </button>
+  </Link>
+
+  <Link href="/learn-more">
+    <button
+      className="px-6 py-2 md:px-8 md:py-2 lg:px-10 lg:py-3 border-2 border-white text-white text-[12px] md:text-[14px] lg:text-[16px] font-medium rounded-full shadow-lg hover:scale-105 transition-transform duration-300"
+      aria-label="Learn More"
+    >
+      Learn More
+    </button>
+  </Link>
+</div>
+
       </div>
     </div>
   );

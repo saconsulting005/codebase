@@ -14,24 +14,41 @@ const IndustrySection: React.FC = () => {
         "Suscipit feugiat purus ac nunc amet. Id pulvinar arcu nibh orci non rhoncus lobortis id neque.",
     },
     {
-      title: "Life Sciences",
+      title: "Manufacturing",
       description:
         "Suscipit feugiat purus ac nunc amet. Id pulvinar arcu nibh orci non rhoncus lobortis id neque.",
     },
     {
-      title: "Private Equity",
+      title: "Retail",
       description:
         "Suscipit feugiat purus ac nunc amet. Id pulvinar arcu nibh orci non rhoncus lobortis id neque.",
     },
+    {
+      title: "Logistic",
+      description:
+        "Suscipit feugiat purus ac nunc amet. Id pulvinar arcu nibh orci non rhoncus lobortis id neque.",
+    },
+    {
+      title: "Trading and FMCG",
+      description:
+        "Suscipit feugiat purus ac nunc amet. Id pulvinar arcu nibh orci non rhoncus lobortis id neque.",
+    },
+    {
+      title: "Dealerships",
+      description:
+        "Suscipit feugiat purus ac nunc amet. Id pulvinar arcu nibh orci non rhoncus lobortis id neque.",
+    },
+   
   ];
 
   return (
-    <div className="flex flex-col lg:flex-row w-full h-auto lg:h-[680px] mx-auto">
+    <div className="flex flex-col lg:flex-row w-full h-auto lg:h-[740px] mx-auto">
       {/* Left Section */}
       <div className="w-full lg:w-1/2 h-auto lg:h-full bg-[#009CDE] flex flex-col justify-center items-start px-6 sm:px-10 lg:px-[100px] py-10 sm:py-[40px] lg:py-[60px] gap-8">
         <h2 className="text-[#F7F6F6] text-[20px] sm:text-[24px] md:text-[28px] lg:text-[30px] font-semibold leading-snug">
-          Crowe provides a breadth of relevant industry offerings and deep insights into leading practices.
+        We provide a breadth of relevant industry offerings and deep insights into leading practices.
         </h2>
+        
 
         <ul className="flex flex-col gap-6 sm:gap-8">
           {listItems.map((item, index) => (

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const WhatWeDo: React.FC = () => {
+const AuditServices: React.FC = () => {
   return (
     <div className="bg-[#F8F8F8] py-16">
       {/* Section Header */}
@@ -9,22 +9,16 @@ const WhatWeDo: React.FC = () => {
         {/* Left Content */}
         <div className="max-w-[600px]">
           <p className="text-[#FF5900] text-sm font-semibold uppercase mb-4">
-            Our Services
+            Audit Services
           </p>
           <h2 className="text-[#009CDE] text-3xl md:text-4xl font-bold mb-6 leading-snug">
-            Audit and assurance services that aim for excellence
+          Audit and assurance services that aim for excellence
           </h2>
           <p className="text-gray-700 text-base leading-relaxed">
-            At Crowe, we’re big on the right experience. That’s why our more
-            than 1,400 Crowe audit professionals make time to understand your
-            needs and listen to your concerns before applying their deep
-            expertise and significant industry specialization.
+          At SA Consulting, we believe in quality assurance services. Our audit professionals make time to understand your needs and listen to your concerns before applying their deep expertise and significant industry specialization.
           </p>
           <p className="mt-4 text-gray-700 text-base leading-relaxed">
-            Whether you’re obtaining financing, planning for acquisitions and
-            divestitures, or funding portfolio companies, our professionals aim
-            to deliver audit and assurance services with efficiency and
-            next-level responsiveness.
+          Whether you’re obtaining financing, planning for acquisitions and divestitures, or funding portfolio companies, our professionals aim to deliver audit and assurance services with efficiency and next-level responsiveness.
           </p>
         </div>
 
@@ -47,27 +41,28 @@ const WhatWeDo: React.FC = () => {
           {
             title: "Statutory audits",
             description:
-              "Suscipit feugiat purus ac nunc amet. Id pulvinar arcu nibh orci non rhoncus lobortis.",
+              "Leveraging our risk based approach, we provide top-notch, objective financial statement audits that are rooted in a deep understanding of your organization. By partnering with experienced auditors who genuinely value your business, your organization can reap multiple benefits, including bolstering its reputation, gaining valuable insights, enhancing service delivery, and optimizing costs.",
           },
           {
             title: "Financial statement audit",
             description:
-              "Sed lorem et nulla tortor sit eget felis. Sit aliquet elementum ac nibh lorem nulla.",
+              "Our expert team assures your financial statements are accurate, reliable, and compliant, empowering you to build trust with stakeholders.",
           },
           {
             title: "Grant audits",
             description:
-              "Vitae aliquam malesuada varius felis. Risus aliquam aliquam consequat habitant.",
+              "Grant Audit Services involve the examination and review of financial and programmatic activities associated with grant funding to ensure compliance with applicable regulations, agreements, and guidelines. These services are critical for organizations that receive grants to demonstrate accountability and transparency.",
           },
           {
             title: "Project audits",
             description:
-              "Suscipit feugiat purus ac nunc amet. Id pulvinar arcu nibh orci non rhoncus lobortis id neque.",
+              "In today's dynamic business landscape, project audits play a crucial role in establishing credibility and building a strong reputation. These audits provide vital assurance to lending agencies and stakeholders that funds are being utilized for their intended purposes. We audit projects funded by major international financial institutions, and donors",
           },
           {
             title: "Stock audits",
             description:
-              "Suscipit feugiat purus ac nunc amet. Id pulvinar arcu nibh orci non rhoncus lobortis id neque.",
+              "Stock Audit Services involve professional verification and analysis of a company s inventory to ensure accurate records and effective inventory management. These services help businesses reconcile their physical stock with their financial records, uncover discrepancies, and identify inefficiencies Stock audit services enhance operational transparency, optimize inventory levels, and support better financial and regulatory compliance. They are crucial for businesses in sectors like retail, manufacturing, and logistics"
+
           },
         ].map((card, index) => (
           <div
@@ -89,9 +84,7 @@ const WhatWeDo: React.FC = () => {
             <p className="text-sm font-light group-hover:text-white leading-relaxed">
               {card.description}
             </p>
-            <button className="flex items-center gap-2 text-sm font-medium group-hover:text-white transition-transform duration-300 hover:translate-x-1">
-              Details <span>&#8594;</span>
-            </button>
+            
           </div>
         ))}
       </div>
@@ -99,4 +92,4 @@ const WhatWeDo: React.FC = () => {
   );
 };
 
-export default WhatWeDo;
+export default AuditServices;

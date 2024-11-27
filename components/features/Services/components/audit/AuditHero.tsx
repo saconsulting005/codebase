@@ -1,9 +1,7 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 
-const ServiceHero: React.FC = () => {
+const AuditHero: React.FC = () => {
   return (
     <div className="relative flex items-center h-[411px] lg:h-[500px]">
       {/* Background Image */}
@@ -23,7 +21,7 @@ const ServiceHero: React.FC = () => {
       <div className="relative max-w-4xl px-6 lg:px-12 text-left">
         {/* Title */}
         <h1 className="text-white font-albert-sans font-semibold text-[30px] sm:text-[40px] leading-tight">
-          Our Services
+          Audit Services
         </h1>
 
         {/* Description */}
@@ -36,4 +34,4 @@ const ServiceHero: React.FC = () => {
   );
 };
 
-export default ServiceHero;
+export default AuditHero;

@@ -1,4 +1,3 @@
-import BusinessSolutionsSection from "@/components/features/BusinessSolutions/BusinessSolutionsSection";
 import CompanyLogos from "@/components/features/companylogos/CompanyLogos";
 import HeroSection from "@/components/features/Hero/Hero";
 import IndustrySection from "@/components/common/IndustrySection";
@@ -22,7 +21,7 @@ export default function Home() {
       </section>
       <CompanyLogos/>
       <SectorsSection/>
-      <BusinessSolutionsSection/>
+
       <FeaturedInsights/>
  
     </>

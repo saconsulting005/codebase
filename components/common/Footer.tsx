@@ -21,9 +21,8 @@ const Footer: React.FC = () => {
             </div>
             <h2 className="text-[20px] font-semibold">SA Consulting </h2>
           </div>
-          <p className="text-[14px] leading-[20px] text-[rgba(255,255,255,0.8)]">
-            Velit facilisi senectus velit elementum. Consequat vel arcu feugiat
-            dui eu tempor pretium ut porta. Dui pellentesque sagittis...
+          <p className="text-[14px] leading-[20px] text-gray-100">
+          SA Consulting is an audit and accounting firm located in Kigali, Rwanda. With an excellent team of professionals, we deliver comprehensive services in audit, assurance, accounting, tax, advisory, training, risk management, and legal compliance.
           </p>
           <div>
             <p className="text-[16px] font-semibold mb-3">Follow Us</p>
