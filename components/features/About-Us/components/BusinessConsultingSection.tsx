@@ -31,9 +31,7 @@ const BusinessConsultingSection: React.FC = () => {
               What we do 
             </h4>
             <p className="text-[16px] text-[rgba(0,13,81,0.6)] leading-relaxed">
-              Suscipit feugiat purus ac nunc amet. Id pulvinar arcu nibh orci
-              non rhoncus lobortis. Sed lorem et nulla tortor sit eget felis.
-              Integer malesuada curabitur vel interdum leo justo at ultricies.
+            SA Consulting Ltd is an accounting and consulting firm that provides audit, tax, and consulting services to public and private entities.
             </p>
           </div>
 
@@ -51,9 +49,7 @@ const BusinessConsultingSection: React.FC = () => {
               How we work
             </h4>
             <p className="text-[16px] text-[rgba(0,13,81,0.6)] leading-relaxed">
-              Sed lorem et nulla tortor sit eget felis. Integer malesuada
-              curabitur vel interdum leo justo at ultricies. Sit aliquet tempus
-              elementum ac nibh lorem nulla morbi nullam.
+            Our team of experts, at SA Consulting, provides comprehensive accounting and financial services tailored to meet the needs of business and individuals
             </p>
           </div>
 
@@ -71,9 +67,7 @@ const BusinessConsultingSection: React.FC = () => {
               Where we work
             </h4>
             <p className="text-[16px] text-[rgba(0,13,81,0.6)] leading-relaxed">
-              Sit aliquet tempus elementum ac nibh lorem nulla morbi nullam.
-              Tincidunt massa amet sagittis aliquam turpis volutpat. Vitae
-              aliquam malesuada varius felis.
+            We are located in Kigali, Rwanda and are ambitious to have regional and international presence.
             </p>
           </div>
         </div>

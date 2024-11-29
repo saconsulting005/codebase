@@ -1,15 +1,12 @@
 import AuditHero from '@/components/features/Services/components/audit/AuditHero'
-import AuditServices from '@/components/features/Services/components/AuditServices'
+import AuditSolutions from '@/components/features/Services/components/audit/AuditSolutions'
 import React from 'react'
-
-
-
 
 export default function page() {
   return (
    <>
   <AuditHero/>
-   <AuditServices/>
+   <AuditSolutions/>
    </>
   )
 }

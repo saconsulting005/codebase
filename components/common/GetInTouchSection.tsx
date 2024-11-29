@@ -56,7 +56,7 @@ const GetInTouchSection: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-6 lg:mb-8">
           <h2 className="text-[#009CDE] text-xl sm:text-2xl lg:text-3xl font-semibold leading-tight mb-2">
-            Let’s talk about audit and assurance
+            Let&apos;s talk about audit and assurance
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-[rgba(0,13,81,0.6)] leading-relaxed">
             Want to add credibility to your financial reporting? We can help.

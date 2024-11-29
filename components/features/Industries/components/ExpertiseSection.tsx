@@ -1,72 +1,35 @@
-import React from "react";
+// ExpertiseSection.tsx  
+"use client";  
 
-const ExpertiseSection: React.FC = () => {
-  return (
-    <div className="bg-white px-4 sm:px-6 lg:px-16 py-12 flex flex-col items-center">
-      {/* Heading Section */}
-      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#009CDE] text-center max-w-4xl leading-tight">
-        At Crowe, deep insurance industry knowledge meets targeted expertise.
-      </h2>
+import React from 'react';  
+import { Hotel, HardHat, ShoppingCart, TrendingUp } from 'lucide-react'; // Ensure correct icon imports  
 
-      {/* Subheading Section */}
-      <p className="mt-4 text-sm sm:text-base lg:text-lg font-normal text-[#333333] text-center max-w-3xl opacity-70">
-        By aligning our specialists to the insurance industry, we bring deeper
-        and broader knowledge to our services. This industry specialization
-        gives us a better view to understand your business and the unique
-        challenges you face.
-      </p>
+const ExpertiseSection = () => {  
+  const areasOfExpertise = [  
+    { title: 'Hotel, Tourism & Guest House', icon: <Hotel size={48} className="text-blue-600" /> },  
+    { title: 'Construction', icon: <HardHat size={48} className="text-blue-600" /> },  
+    { title: 'Retail', icon: <ShoppingCart size={48} className="text-blue-600" /> }, // Use ShoppingCart for Retail  
+    { title: 'Trading', icon: <TrendingUp size={48} className="text-blue-600" /> },  
+  ];  
 
-      {/* Expertise Grid */}
-      <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl">
-        {/* Column 1 */}
-        <div className="flex flex-col items-center text-center">
-          <div className="w-12 h-12 bg-blue-100 flex items-center justify-center rounded-full">
-            {/* Replace with actual icon */}
-            <span className="text-[#009CDE] text-2xl font-bold">🏦</span>
-          </div>
-          <h3 className="mt-4 text-lg sm:text-xl font-bold text-[#009CDE] leading-tight">
-            Audit and Assurance
-          </h3>
-          <p className="mt-2 text-sm sm:text-base lg:text-lg font-normal text-[#333333] opacity-70 leading-relaxed">
-            We offer an array of services to help insurance businesses meet
-            their financial reporting needs and regulatory needs.
-          </p>
-        </div>
-
-        {/* Column 2 */}
-        <div className="flex flex-col items-center text-center">
-          <div className="w-12 h-12 bg-blue-100 flex items-center justify-center rounded-full">
-            {/* Replace with actual icon */}
-            <span className="text-[#009CDE] text-2xl font-bold">📊</span>
-          </div>
-          <h3 className="mt-4 text-lg sm:text-xl font-bold text-[#009CDE] leading-tight">
-            Tax Consulting and Compliance
-          </h3>
-          <p className="mt-2 text-sm sm:text-base lg:text-lg font-normal text-[#333333] opacity-70 leading-relaxed">
-            We provide assistance with M&A, reorganizations, and
-            demutualizations, as well as with captive insurance company
-            formation and structuring.
-          </p>
-        </div>
-
-        {/* Column 3 */}
-        <div className="flex flex-col items-center text-center">
-          <div className="w-12 h-12 bg-blue-100 flex items-center justify-center rounded-full">
-            {/* Replace with actual icon */}
-            <span className="text-[#009CDE] text-2xl font-bold">💼</span>
-          </div>
-          <h3 className="mt-4 text-lg sm:text-xl font-bold text-[#009CDE] leading-tight">
-            Consulting
-          </h3>
-          <p className="mt-2 text-sm sm:text-base lg:text-lg font-normal text-[#333333] opacity-70 leading-relaxed">
-            Crowe can help implement or update risk management and compliance
-            requirements (MAR, ORSA, and internal audit, as examples) to
-            leverage technology investments and gain operational efficiencies.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-};
+  return (  
+    <div className="max-w-6xl mx-auto p-6">  
+      <h2 className="text-3xl font-bold mb-6 text-gray-800 text-center">SA Consulting has deep expertise in:</h2>  
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">  
+        {areasOfExpertise.map((area, index) => (  
+          <div  
+            key={index}  
+            className="flex flex-col items-center justify-center p-8 border border-gray-200 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl bg-white"  
+          >  
+            <div className="mb-4 flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full">  
+              {area.icon}  
+            </div>  
+            <h3 className="text-lg font-semibold text-blue-700 text-center">{area.title}</h3>  
+          </div>  
+        ))}  
+      </div>  
+    </div>  
+  );  
+};  
 
 export default ExpertiseSection;

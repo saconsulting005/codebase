@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
+import Whatsapp from "@/components/common/Whatsapp";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -16,8 +17,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: " SA Consulting",
-  description: " Audit Consulting is a business consulting firm that provides services to various sectors of the economy.",
+  title: "SA Consulting", 
+  description: "SA Consulting Ltd is a an accounting and consulting firm that provides audit, tax, and consulting services to public and private entities. ",
 };
 
 export default function RootLayout({
@@ -33,6 +34,7 @@ export default function RootLayout({
 
         <Navbar />
         {children}
+        <Whatsapp/>
         <Footer/>
       </body>
     </html>

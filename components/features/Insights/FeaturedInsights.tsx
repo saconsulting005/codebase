@@ -47,7 +47,7 @@ const FeaturedInsights: React.FC = () => {
               <Image
                 src={insight.image}
                 alt={insight.title}
-                layout="fill"
+                fill
                 className="object-cover"
               />
             </div>

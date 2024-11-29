@@ -4,9 +4,9 @@ import Image from "next/image";
 const TeamSection: React.FC = () => {
   const teamMembers = [
     {
-      name: "Ryder Malone",
-      position: "Global Interactions Agent",
-      image: "/assets/aboutus/Ryder.png",
+      name: "Abdul Malik",
+    position: "Software Engineer & IT Consultant",
+      image: "/assets/aboutus/malik.JPG",
     },
     {
       name: "Allyson Blair",

@@ -8,20 +8,13 @@ const AboutOffer: React.FC = () => {
         {/* Left Content */}
         <div className="max-w-[600px]">
           <div className="text-[#FF5900] text-[16px] font-[600] uppercase mb-4">
-            About 
+            About Us
           </div>
           <h2 className="text-[#009CDE] text-[40px] font-[600] mb-6 leading-snug">
           Purpose drives us
           </h2>
           <p className="text-[16px] text-[rgba(0,13,81,0.6)] font-[400] leading-normal">
-            Sit aliquet tempus elementum ac nibh lorem nulla morbi nullam.
-            Tincidunt massa amet sagittis aliquam turpis volutpat. Vitae aliquam
-            malesuada varius felis. Risus aliquam aliquam consequat habitant. Id
-            elit turpis amet vel at sapien. Massa tempus augue lobortis enim
-            quam consectetur dictum. Elementum id tortor venenatis lectus sed.
-            Adipiscing nisi felis aliquam nunc. Quis et sed ac urna augue
-            feugiat mi eget. Eget viverra egestas porta consectetur commodo
-            ante.
+          Our Purpose is Shaping Your Better Tomorrow and we are driven by passion to become the Certified Public Accounting firm of choice in Rwanda, striving for continual growth based upon a reputation of excellence derived from proven results. This could only be reached through hard work and cultivating relationships built on trust and reliability, hence earn respect of Rwanda’s business and financial communities.
           </p>
         </div>
 
