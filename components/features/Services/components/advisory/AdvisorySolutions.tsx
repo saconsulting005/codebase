@@ -26,10 +26,10 @@ const AdvisorySolutions: React.FC = () => {
 
   return (
     <div className="max-w-4xl my-6 mx-auto p-6 bg-white rounded-lg shadow-lg">
-      <h1 className="text-4xl font-bold mb-6 text-gray-800">Discover Your Tax Solutions with Us</h1>
+      <h1 className="lg:text-2xl text-lg md:text-xl xl:text-3xl font-bold mb-6 text-gray-800">Are you making the best decision for your company&apos;s future?</h1>
 
       {/* Unique Value Proposition */}
-      <h2 className="text-2xl font-semibold text-gray-800 mb-4">Are you making the best decision for your company&apos;s future?</h2>
+      
       <p className="mb-4 text-gray-600">
         What sets SA Consulting apart is our ability to tailor our advisory services to your precise needs. We don&apos;t believe in one-size-fits-all solutions. Instead, we craft strategies, insights, and recommendations that are as unique as your organization.
       </p>

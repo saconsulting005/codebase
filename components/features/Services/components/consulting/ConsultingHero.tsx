@@ -26,8 +26,7 @@ const ConsultingHero: React.FC = () => {
 
         {/* Description */}
         <p className="mt-4 text-white text-base sm:text-lg leading-relaxed max-w-2xl">
-          Discover the value that might be provided by an objective audit done
-          by auditors with significant audit and industry experience.
+        Find practical solutions to your business needs with our consulting services tailored to your industry
         </p>
       </div>
     </div>

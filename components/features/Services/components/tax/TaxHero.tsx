@@ -26,8 +26,7 @@ const TaxHero: React.FC = () => {
 
         {/* Description */}
         <p className="mt-4 text-white text-base sm:text-lg leading-relaxed max-w-2xl">
-          Discover the value that might be provided by an objective audit done
-          by auditors with significant audit and industry experience.
+        We offer a full range of tax services designed to meet the diverse needs of individuals, businesses, and organizations. Our experts with significant industry experience ensures compliance and maximizes savings.
         </p>
       </div>
     </div>

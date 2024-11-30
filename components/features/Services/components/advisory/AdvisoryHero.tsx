@@ -26,8 +26,7 @@ const AdvisoryHero: React.FC = () => {
 
         {/* Description */}
         <p className="mt-4 text-white text-base sm:text-lg leading-relaxed max-w-2xl">
-          Discover the value that might be provided by an objective audit done
-          by auditors with significant audit and industry experience.
+        Navigate uncertainty and complexity in strategic planning, enterprise risk management and regulatory compliance with our specialized advisory services.
         </p>
       </div>
     </div>

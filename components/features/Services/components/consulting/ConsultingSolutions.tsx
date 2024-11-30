@@ -100,27 +100,13 @@ const ConsultingSolutions = () => {
           onClick={() => toggleSection('outsourcingBenefitsOpen')}
           className="flex items-center justify-start w-full p-4 hover:bg-gray-200"
         >
-          <div className="flex items-center space-x-4">
-            {sections.outsourcingBenefitsOpen ? (
-              <Minus size={32} className="text-red-600" />
-            ) : (
-              <Plus size={32} className="text-green-600" />
-            )}
-            <span className="text-lg font-semibold text-gray-800">Why Outsource Your Non-Core Processes?</span>
-          </div>
+        
         </button>
-        {sections.outsourcingBenefitsOpen && (
-          <div className="pl-8 pb-2 text-gray-600">
-            <ul className="list-disc">
-              <li>Cost Effective</li>
-              <li>Faster & Quality Services</li>
-              <li>Focus on Core Business</li>
-              <li>Access to a Pool of Expertise</li>
-            </ul>
-          </div>
-        )}
+        
       </div>
     </div>
+
+    
   );
 };
 

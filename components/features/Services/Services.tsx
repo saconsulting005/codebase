@@ -33,7 +33,7 @@ const ServicesSection: React.FC = () => {
       </div>
 
       {/* Cards Section */}
-      <div className="container mx-auto mt-10 sm:mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 px-4 md:px-6 lg:px-8">
+      <div className="container mx-auto mt-10  md:mt-16 lg:mt-16 xl:mt-18 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 px-4 md:px-6 xl:px-8 lg:px-8">
         {/* Card 1 (Audit) */}
         <Link href="/services/audit">
           <div className="group bg-white hover:bg-[#009CDE] hover:text-white transition-all duration-300 flex flex-col justify-start items-start gap-4 p-6 sm:p-8 rounded-lg shadow-md cursor-pointer">
