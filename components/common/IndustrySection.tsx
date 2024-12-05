@@ -5,38 +5,24 @@ const IndustrySection: React.FC = () => {
   const listItems = [
     {
       title: "Health Care",
-      description:
-        "Suscipit feugiat purus ac nunc amet. Id pulvinar arcu nibh orci non rhoncus lobortis id neque.",
     },
     {
       title: "Financial Services",
-      description:
-        "Suscipit feugiat purus ac nunc amet. Id pulvinar arcu nibh orci non rhoncus lobortis id neque.",
     },
     {
       title: "Manufacturing",
-      description:
-        "Suscipit feugiat purus ac nunc amet. Id pulvinar arcu nibh orci non rhoncus lobortis id neque.",
     },
     {
       title: "Retail",
-      description:
-        "Suscipit feugiat purus ac nunc amet. Id pulvinar arcu nibh orci non rhoncus lobortis id neque.",
     },
     {
       title: "Logistic",
-      description:
-        "Suscipit feugiat purus ac nunc amet. Id pulvinar arcu nibh orci non rhoncus lobortis id neque.",
     },
     {
       title: "Trading and FMCG",
-      description:
-        "Suscipit feugiat purus ac nunc amet. Id pulvinar arcu nibh orci non rhoncus lobortis id neque.",
     },
     {
       title: "Dealerships",
-      description:
-        "Suscipit feugiat purus ac nunc amet. Id pulvinar arcu nibh orci non rhoncus lobortis id neque.",
     },
   ];
 
@@ -49,7 +35,7 @@ const IndustrySection: React.FC = () => {
           into leading practices.
         </h2>
 
-        <ul className="flex flex-col gap-3  lg:gap-5 ">
+        <ul className="flex flex-col gap-3 lg:gap-5">
           {listItems.map((item, index) => (
             <li key={index} className="flex items-start gap-2 lg:gap-3">
               <div className="flex-shrink-0">
@@ -61,12 +47,10 @@ const IndustrySection: React.FC = () => {
                 />
               </div>
               <div>
-                <h3 className="text-white text-[14px   md:text-[16px] lg:text-[18px] xl:text-[19px] font-semibold">
+                <h3 className="text-white text-[14px] md:text-[16px] lg:text-[18px] xl:text-[19px] font-semibold">
                   {item.title}
                 </h3>
-                <p className="text-white text-[12px]  md:text-[14px] lg:text-[15px] xl:text-[18px]">
-                  {item.description}
-                </p>
+                {/* Remove the description rendering */}
               </div>
             </li>
           ))}
@@ -74,7 +58,7 @@ const IndustrySection: React.FC = () => {
       </div>
 
       {/* Right Section */}
-      <div className="w-full lg:w-1/2 h-[300px]  lg:h-full xl:h-full relative">
+      <div className="w-full lg:w-1/2 h-[300px] lg:h-full xl:h-full relative">
         <Image
           src="/assets/industry-image.png" // Replace with your actual image path
           alt="Industry Insight"
