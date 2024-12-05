@@ -61,9 +61,9 @@ const Navbar: React.FC = () => {
         </ul>  
 
         <div className="hidden md:block">  
-          <button className="px-6 py-2 rounded-md font-semibold border-2 border-[#009CDE] text-[#009CDE] hover:bg-[#009CDE] hover:text-white transition-all duration-300">  
+          <Link href="contact-us" className="px-6 py-3 rounded-md font-semibold border-2 border-[#009CDE] text-[#009CDE] hover:bg-[#009CDE] hover:text-white transition-all duration-300">  
             Get in touch  
-          </button>  
+          </Link>  
         </div>  
 
         <div className="md:hidden">  

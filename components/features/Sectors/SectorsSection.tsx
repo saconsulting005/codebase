@@ -3,10 +3,10 @@ import Image from "next/image";
 
 const SectorsSection: React.FC = () => {
   const sectors = [
-    { image: "/assets/sectors/ai.png" },
-    { image: "/assets/sectors/digital-disruption.png" },
-    { image: "/assets/sectors/election-2024.png" },
-    { image: "/assets/sectors/regulatory-changes.png" },
+    { image: "/assets/sectors/health.png" },
+    { image: "/assets/sectors/manufacturing.png" },
+    { image: "/assets/sectors/dealership.png" },
+    { image: "/assets/sectors/trading.png" },
     { image: "/assets/sectors/financial-services.png" },
     { image: "/assets/sectors/construction.png" },
     { image: "/assets/sectors/retail.png" },

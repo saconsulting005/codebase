@@ -10,10 +10,8 @@ const GrowYourCareer: React.FC = () => {
 
       {/* Subheading Section */}
       <p className="mt-4 text-sm sm:text-base lg:text-lg font-normal text-[#333333] text-center max-w-3xl opacity-70 leading-relaxed">
-        Large enough to support evolution and growth but small enough to stay
-        personalized and supportive, Crowe is a great place for students and
-        recent graduates to start a career. Check out some of the reasons why
-        Crowe has been recognized as a great place to work since 2016.
+         SA is a great place for students and
+        recent graduates to start a career.
       </p>
     </div>
   );

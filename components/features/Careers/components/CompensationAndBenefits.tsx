@@ -12,7 +12,7 @@ const CompensationAndBenefits: React.FC = () => {
             Generous compensation and benefits
           </h3>
           <p className="mt-4 text-sm sm:text-base lg:text-lg text-[#333333] font-normal opacity-70 leading-relaxed">
-            Crowe offers a competitive salary for your field and full benefits
+            SA offers a competitive salary for your field and full benefits
             right away, including accreditation reimbursement for licensing and
             certifications, continuing professional education credits, and a
             variety of rewards and bonuses.

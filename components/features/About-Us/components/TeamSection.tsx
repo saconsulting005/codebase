@@ -9,9 +9,9 @@ const TeamSection: React.FC = () => {
       image: "/assets/aboutus/malik.JPG",
     },
     {
-      name: "Allyson Blair",
-      position: "Investor Response Assistant",
-      image: "/assets/aboutus/Allyson.png",
+      name: "Faisal Umar",
+      position: "ACCA, BSc Applied Accounting",
+      image: "/assets/aboutus/faisal.jpg",
     },
     {
       name: "Jackson Mahoney",
