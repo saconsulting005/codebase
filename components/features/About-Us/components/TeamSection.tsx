@@ -5,42 +5,50 @@ const TeamSection: React.FC = () => {
   const teamMembers = [
     {
       name: "Abdul Malik",
-    position: "Software Engineer & IT Consultant",
+      position: "Software Engineer & IT Consultant",
+      destination: "Senior Consultant",
       image: "/assets/aboutus/malik.JPG",
     },
     {
       name: "Faisal Umar",
-      position: "ACCA, BSc Applied Accounting",
+      position: "(ACCA, BSc Applied Accounting)",
+      destination: "Audit Supervisor",
       image: "/assets/aboutus/faisal.jpg",
     },
     {
       name: "Jackson Mahoney",
       position: "Chief Factors Coordinator",
+      destination: "Lead Analyst",
       image: "/assets/aboutus/Jackson.png",
     },
     {
       name: "Kara Hawkins",
       position: "Product Quality Strategist",
+      destination: "Quality Lead",
       image: "/assets/aboutus/Kara.png",
     },
     {
       name: "Valeria Bolton",
       position: "Global Interactions Agent",
+      destination: "Client Relations Manager",
       image: "/assets/aboutus/Valeria.png",
     },
     {
       name: "Johnathon Crosby",
       position: "Investor Response Assistant",
+      destination: "Investor Relations Officer",
       image: "/assets/aboutus/Johnathon.png",
     },
     {
       name: "Derick Fry",
       position: "Product Quality Strategist",
+      destination: "Quality Control Specialist",
       image: "/assets/aboutus/Derick.png",
     },
     {
       name: "Erick Taylor",
       position: "Chief Factors Coordinator",
+      destination: "Strategy Head",
       image: "/assets/aboutus/Erick.png",
     },
   ];
@@ -53,15 +61,15 @@ const TeamSection: React.FC = () => {
           Business Consulting
         </h3>
         <h2 className="text-[#009CDE] text-[28px] font-semibold mb-10 leading-tight">
-          Our team of experts
+          Meet Our Team of Experts
         </h2>
 
         {/* Team Members */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300"
+              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-gray-300"
             >
               <div className="relative">
                 <Image
@@ -69,15 +77,20 @@ const TeamSection: React.FC = () => {
                   alt={member.name}
                   width={300}
                   height={200}
-                  className="w-full object-cover"
+                  className="w-full object-cover rounded-t-lg"
                 />
               </div>
-              <div className="p-4">
-                <h4 className="text-[#001D51] text-[16px] font-semibold mb-1">
+              <div className="p-6 space-y-4">
+                {/* Name and Position */}
+                <h4 className="text-[#001D51] text-[18px] font-semibold mb-1 border-b-2 border-[#009CDE] pb-1">
                   {member.name}
                 </h4>
-                <p className="text-[14px] text-[rgba(0,13,81,0.6)]">
-                  {member.position}
+                <p className="text-[#555] text-[14px] mb-2">
+                   {member.position}
+                </p>
+                {/* Destination */}
+                <p className="text-[#009CDE] text-[14px] font-medium border-t-2 border-[#E5E5E5] pt-2">
+                  {member.destination}
                 </p>
               </div>
             </div>
