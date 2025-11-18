@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
     <div className="bg-[#F3F3F3] dark:bg-gray-900">  
       <nav className="flex justify-between items-center w-[90%] max-w-[1440px] mx-auto py-4">  
         <Link href="/" aria-label="Go to homepage">  
-          <Image src="/assets/logo.png" alt="Logo" width={50} height={50} priority />  
+          <Image src="/assets/logo.png" alt="Logo"  width={70} height={70} priority />  
         </Link>  
 
         <ul className="hidden md:flex space-x-8 text-[16px] font-semibold text-[#009CDE] dark:text-white">  
