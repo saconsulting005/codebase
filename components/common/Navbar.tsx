@@ -25,10 +25,21 @@ const Navbar: React.FC = () => {
 
   return (  
     <div className="bg-[#F3F3F3] dark:bg-gray-900">  
-      <nav className="flex justify-between items-center w-[90%] max-w-[1440px] mx-auto py-4">  
-        <Link href="/" aria-label="Go to homepage">  
-          <Image src="/assets/logo.png" alt="Logo"  width={70} height={70} priority />  
-        </Link>  
+      <nav className="flex justify-between items-center w-[90%] max-w-[1440px] mx-auto py-4">
+        <Link href="/" aria-label="Go to homepage" className="flex items-center">
+          <Image src="/assets/logo1.png" alt="Logo"  width={70} height={70} priority />
+          <div className="flex flex-col justify-center">
+            <div className="font-semibold leading-none" style={{ fontSize: '1.3rem', color: 'rgb(181, 22, 27)' }}>
+              SA
+            </div>
+            <div className="font-semibold leading-none" style={{ fontSize: '1.3rem', color: 'rgb(181, 22, 27)' }}>
+              CONSULTING
+            </div>
+            <div className="font-semibold leading-none" style={{ fontSize: '0.875rem', color: 'rgb(181, 22, 27)' }}>
+              CERTIFIED PUBLIC ACCOUNTANTS
+            </div>
+          </div>
+        </Link>
 
         <ul className="hidden md:flex space-x-8 text-[16px] font-semibold text-[#009CDE] dark:text-white">  
           {links.map((link, index) => (  
