@@ -86,43 +86,43 @@ const Navbar: React.FC = () => {
         </div>  
       </nav>  
 
-      {isOpen && (  
-             <div className="md:hidden bg-[#F3F3F3] dark:bg-gray-900">  
-             <ul className="flex flex-col space-y-4 text-center py-4 text-[16px] font-semibold text-[#009CDE] dark:text-white">  
-               {links.map((link, index) => (  
-                 <li key={index} className="relative">  
-                   {link.name === 'Services' ? (  
-                     <div>  
-                       <button   
-                         onClick={() => setIsDropdownOpen(!isDropdownOpen)}   
-                         className="flex items-center justify-between w-full py-4 text-left hover:bg-[#f0f0f0] transition-colors duration-200"  
-                       >  
-                         Services  
-                         <ChevronDown className={`transition-transform duration-300 transform ${isDropdownOpen ? 'rotate-180' : ''}`} />  
-                       </button>  
-                       {isDropdownOpen && (  
-                         <div className="flex flex-col space-y-4 px-4 py-2 w-full bg-white text-black rounded-md shadow-lg transition-transform duration-300">  
-                           {['Audit', 'Tax', 'Advisory', 'Consulting'].map(service => (  
-                             <Link   
-                               key={service}   
-                               href={`/services/${service.toLowerCase()}`}   
-                               className="block py-2 hover:bg-[#f0f0f0] transition-colors duration-200"   
-                               onClick={handleMenuItemClick}  
-                             >  
-                               {service}  
-                             </Link>  
-                           ))}  
-                         </div>  
-                       )}  
-                     </div>  
-                   ) : (  
-                     <Link href={link.href} onClick={handleMenuItemClick} className="block py-4 text-left hover:bg-[#f0f0f0] transition-colors duration-200">{link.name}</Link>  
-                   )}  
-                 </li>  
-               ))}  
-             </ul>  
-           </div> 
-      )}  
+      {isOpen && (
+             <div className="md:hidden bg-[#F3F3F3] dark:bg-gray-900">
+             <ul className="flex flex-col space-y-4 text-center py-4 text-[16px] font-semibold text-[#009CDE] dark:text-white">
+               {links.map((link, index) => (
+                 <li key={index} className="relative">
+                   {link.name === 'Services' ? (
+                     <div>
+                       <button 
+                         onClick={() => setIsDropdownOpen(!isDropdownOpen)} 
+                         className="flex items-center justify-center gap-2 w-full py-4 text-center hover:bg-[#f0f0f0] transition-colors duration-200"
+                       >
+                         Services
+                         <ChevronDown className={`transition-transform duration-300 transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
+                       </button>
+                       {isDropdownOpen && (
+                         <div className="flex flex-col space-y-4 px-4 py-2 w-full bg-white text-black rounded-md shadow-lg transition-transform duration-300">
+                           {['Audit', 'Tax', 'Advisory', 'Consulting'].map(service => (
+                             <Link 
+                               key={service} 
+                               href={`/services/${service.toLowerCase()}`} 
+                               className="block py-2 text-center hover:bg-[#f0f0f0] transition-colors duration-200"
+                               onClick={handleMenuItemClick}
+                             >
+                               {service}
+                             </Link>
+                           ))}
+                         </div>
+                       )}
+                     </div>
+                   ) : (
+                     <Link href={link.href} onClick={handleMenuItemClick} className="block py-4 text-center hover:bg-[#f0f0f0] transition-colors duration-200">{link.name}</Link>
+                   )}
+                 </li>
+               ))}
+             </ul>
+           </div>
+      )}
     </div>  
   );  
 };  
