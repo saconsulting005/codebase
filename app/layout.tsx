@@ -19,6 +19,15 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "SA Consulting", 
   description: "SA Consulting Ltd is a an accounting and consulting firm that provides audit, tax, and consulting services to public and private entities. ",
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/assets/logo.png', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/assets/logo.png', type: 'image/png' },
+    ],
+  },
 };
 
 export default function RootLayout({
