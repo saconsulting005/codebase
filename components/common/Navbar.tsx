@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
     <div className="bg-[#F3F3F3] dark:bg-gray-900">  
       <nav className="flex justify-between items-center w-[90%] max-w-[1440px] mx-auto py-4">
         <Link href="/" aria-label="Go to homepage" className="flex items-center">
-          <Image src="/favicon.ico" alt="Logo"  width={70} height={70} priority />
+          <Image src="/assets/logo1.png" alt="Logo"  width={70} height={70} priority />
           <div className="flex flex-col justify-center">
             <div className="font-semibold leading-none" style={{ fontSize: '1.3rem', color: 'rgb(181, 22, 27)' }}>
               SA
